@@ -16,7 +16,7 @@ In addition, ADDA was implemented to improve the results of DANN. The results of
 
 The test data is also mapped to the 2D-space by applying t-SNE. In the following, the (a) different digit classes and the (b) domains are visualized for each of the two improved UDA models.
 
-![alt text](https://github.com/kipu1231/Unsupervised-Domain-Adaption/blob/master/Results/UDA.png)
+![alt text](https://github.com/kipu1231/Unsupervised-Domain-Adaption/blob/master/Results/ADDA.png)
 
 # Usage
 
