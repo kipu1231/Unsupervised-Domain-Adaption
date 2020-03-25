@@ -63,7 +63,6 @@ if __name__ == '__main__':
     # model.load_state_dict(checkpoint)
 
     if torch.cuda.is_available():
-        print("setze model auf Cuda")
         model.cuda()  # load model to gpu
 
     ''' define loss '''
@@ -120,9 +119,6 @@ if __name__ == '__main__':
                 source_class_loss = criterion(source_class_out, cls)
                 source_domain_loss = criterion(source_domain_out, domains)
 
-                print(source_class_loss)
-                print(source_domain_loss)
-
                 ''' TARGET DATA '''
                 ''' Move target data to cuda '''
                 target_imgs, _ = next(iter(target_data))
@@ -141,7 +137,6 @@ if __name__ == '__main__':
                 _, target_domain_out = model(target_imgs, lambd)
 
                 target_domain_loss = criterion(target_domain_out, domains)
-                print(target_domain_loss)
 
                 ''' Overall loss and  backpropagation'''
                 loss = source_class_loss + source_domain_loss + target_domain_loss

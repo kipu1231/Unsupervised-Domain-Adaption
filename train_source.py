@@ -63,7 +63,6 @@ if __name__ == '__main__':
     # model.load_state_dict(checkpoint)
 
     if torch.cuda.is_available():
-        print("setze model auf Cuda")
         model.cuda()  # load model to gpu
 
     ''' define loss '''
