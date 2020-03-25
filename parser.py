@@ -6,13 +6,13 @@ def arg_parse():
     parser = argparse.ArgumentParser(description='Parser for HW3')
 
     # Datasets parameters
-    parser.add_argument('--data_dir', type=str, default='hw3_data',
+    parser.add_argument('--data_dir', type=str, default='',
                         help="root path to data directory")
     parser.add_argument('--workers', default=8, type=int,
                         help="number of data loading workers (default: 4)")
     parser.add_argument('--target_data', type=str, default='mnistm',
                         help="Target data for testing")
-    parser.add_argument('--csv_dir', type=str, default='hw3_data',
+    parser.add_argument('--csv_dir', type=str, default='',
                         help="root path to store prediction csv")
 
 
