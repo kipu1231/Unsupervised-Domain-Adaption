@@ -14,57 +14,6 @@ MEAN = [0.485, 0.456, 0.406]
 STD = [0.229, 0.224, 0.225]
 
 
-class Face(Dataset):
-    def __init__(self, args, mode='train'):
-        self.mode = mode
-        self.data_dir = args.data_dir
-
-        self.img_dir = os.path.join(self.data_dir, 'face/train')
-        csv_path = os.path.join(self.data_dir, 'face/' + 'train.csv')
-
-        ''' read the data list '''
-        with open(csv_path, newline='') as csvfile:
-            next(csvfile)
-            self.data = list(csv.reader(csvfile))
-
-        ''' set up image path '''
-        for d in self.data:
-            d[0] = os.path.join(self.img_dir, d[0])
-            d[1] = int(float(d[10]))
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-            d.pop()
-
-        ''' set up image trainsform '''
-        self.transform = transforms.Compose([
-                # transforms.RandomHorizontalFlip(0.5),
-                transforms.ToTensor(),  # (H,W,C)->(C,H,W), [0,255]->[0, 1.0] RGB->RGB
-                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-            ])
-
-    def __len__(self):
-        return len(self.data)
-
-    def __getitem__(self, idx):
-        ''' get data '''
-        img_path, cls = self.data[idx]
-        #print(img_path[0])
-
-        ''' read image '''
-        img = Image.open(img_path).convert('RGB')
-
-        return self.transform(img), cls
-
-
 class Mnist(Dataset):
     def __init__(self, args, mode, visualization=False):
         ''' set up basic parameters for dataset '''
@@ -72,18 +21,18 @@ class Mnist(Dataset):
         self.data_dir = args.data_dir
 
         if self.mode == 'val' or self.mode == "train":
-            self.img_dir = os.path.join(self.data_dir, 'digits/mnistm/' + self.mode)
+            self.img_dir = os.path.join(self.data_dir, 'mnistm/' + self.mode)
             if visualization:
-                self.img_dir = os.path.join(self.data_dir, 'digits/mnistm/test')
+                self.img_dir = os.path.join(self.data_dir, 'mnistm/test')
         elif self.mode == "test":
             self.img_dir = self.data_dir
 
         ''' read the data list '''
         if self.mode == 'val' or self.mode == "train":
-            csv_path = os.path.join(self.data_dir,  'digits/mnistm/' + self.mode + '.csv')
+            csv_path = os.path.join(self.data_dir,  'mnistm/' + self.mode + '.csv')
 
             if visualization:
-                csv_path = os.path.join(self.data_dir, 'digits/mnistm/test.csv')
+                csv_path = os.path.join(self.data_dir, 'mnistm/test.csv')
 
             with open(csv_path, newline='') as csvfile:
                 next(csvfile)
@@ -145,17 +94,17 @@ class Svhn(Dataset):
         self.data_dir = args.data_dir
 
         if self.mode == 'val' or self.mode == "train":
-            self.img_dir = os.path.join(self.data_dir, 'digits/svhn/' + self.mode)
+            self.img_dir = os.path.join(self.data_dir, 'svhn/' + self.mode)
             if visualization:
-                self.img_dir = os.path.join(self.data_dir, 'digits/svhn/test')
+                self.img_dir = os.path.join(self.data_dir, 'svhn/test')
         elif self.mode == "test":
             self.img_dir = self.data_dir
 
         ''' read the data list '''
         if self.mode == 'val' or self.mode == "train":
-            csv_path = os.path.join(self.data_dir, 'digits/svhn/' + self.mode + '.csv')
+            csv_path = os.path.join(self.data_dir, 'svhn/' + self.mode + '.csv')
             if visualization:
-                csv_path = os.path.join(self.data_dir, 'digits/svhn/test.csv')
+                csv_path = os.path.join(self.data_dir, 'svhn/test.csv')
 
             with open(csv_path, newline='') as csvfile:
                 next(csvfile)
