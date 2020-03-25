@@ -17,7 +17,7 @@ In order to visualize the output of the feature extractor (latent space), the te
 In addition, ADDA was implemented to improve the results of DANN. The results of the models are displayed in the following table.
 
 <p align="center">
-<img src="/Results/acc_adda.pn" width="500" alt="ADDA accuracy"/>
+<img src="/Results/acc_adda.png" width="500" alt="ADDA accuracy"/>
 </p>
 
 The test data is also mapped to the 2D-space by applying t-SNE. In the following, the (a) different digit classes and the (b) domains are visualized for each of the two improved UDA models.
