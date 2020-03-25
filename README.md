@@ -4,7 +4,7 @@ Implementation of two models for unsupervised domain adaption aiming to realiziz
 ### Results
 To compare the results, DANN is additionally trained on source and target data only which serves as lower and upper bound. In the case of SVHN → MNIST-M, the accuracy lays above the one of DANN due to the fact that the training process of DANN is not very stable. An overview of the training accuracy is given in the following table.
 
-![alt text](https://github.com/kipu1231/GAN-Image-Generation/blob/master/Results/fig_gan.jpg)
+![alt text](https://github.com/kipu1231/Unsupervised-Domain-Adaption/blob/master/Results/acc_dann.png)
 
 In order to visualize the output of the feature extractor (latent space), the test data was mapped to the 2D-space using t-SNE. The results are visualized in the following for (a) the different digit classes and (b) the different domains.
 
@@ -12,7 +12,7 @@ In order to visualize the output of the feature extractor (latent space), the te
 
 In addition, ADDA was implemented to improve the results of DANN. The results of the models are displayed in the following table.
 
-![alt text](https://github.com/kipu1231/GAN-Image-Generation/blob/master/Results/fig_gan.jpg)
+![alt text](https://github.com/kipu1231/Unsupervised-Domain-Adaption/blob/master/Results/acc_adda.png)
 
 The test data is also mapped to the 2D-space by applying t-SNE. In the following, the (a) different digit classes and the (b) domains are visualized for each of the two improved UDA models.
 
