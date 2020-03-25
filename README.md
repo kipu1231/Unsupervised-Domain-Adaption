@@ -8,7 +8,7 @@ To compare the results, DANN is additionally trained on source and target data o
 
 In order to visualize the output of the feature extractor (latent space), the test data was mapped to the 2D-space using t-SNE. The results are visualized in the following for (a) the different digit classes and (b) the different domains.
 
-![alt text](https://github.com/kipu1231/Unsupervised-Domain-Adaption/blob/master/Results/DANN.png)
+<img src="/Results/DANN.png" width="400" alt="Data overview"/>
 
 In addition, ADDA was implemented to improve the results of DANN. The results of the models are displayed in the following table.
 
