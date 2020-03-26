@@ -66,4 +66,5 @@ To evaluate your the models, the evaluation script can be run by using the follo
  - `$2` is the path to the ground truth (e.g. `/digits/svhn/test.csv`)
 
 ### tSNE
+All above visualizations are made with tSNE to visualize the output of the feature extractor.
 
