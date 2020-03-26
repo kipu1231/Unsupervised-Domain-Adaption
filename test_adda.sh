@@ -1,7 +1,7 @@
-wget https://www.dropbox.com/s/7nrv9dvcgvk4gti/svhn_mnistm_uda_target_model_best.pth.tar?dl=1
-wget https://www.dropbox.com/s/99ief378nxrc196/svhn_mnistm_uda_classifier_best.pth.tar?dl=1
-wget https://www.dropbox.com/s/bkbnh6cx4nuqc4j/mnistm_svhn_uda_target_model.pth.tar?dl=1
-wget https://www.dropbox.com/s/y94jj4rju77wct5/mnistm_svhn_uda_classifier_best.pth.tar?dl=1
+wget https://www.dropbox.com/s/hl6ath1bvdwba27/svhn_mnistm_uda_target_model_best.pth.tar?dl=1
+wget https://www.dropbox.com/s/sifc6qzxszczfhf/svhn_mnistm_uda_classifier_best.pth.tar?dl=1
+wget https://www.dropbox.com/s/prin5csfyt67vke/mnistm_svhn_uda_target_model.pth.tar?dl=1
+wget https://www.dropbox.com/s/sqmgfby082kfu8m/mnistm_svhn_uda_classifier_best.pth.tar?dl=1
 RESUME1='svhn_mnistm_uda_target_model_best.pth.tar?dl=1'
 RESUME2='svhn_mnistm_uda_classifier_best.pth.tar?dl=1'
 RESUME3='mnistm_svhn_uda_target_model.pth.tar?dl=1'
